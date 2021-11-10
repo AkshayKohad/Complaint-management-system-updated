@@ -1,0 +1,40 @@
+<%layout("layouts/boilerplate")%>
+  <h1>Faculty Complaints</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Sr.no.</th>
+        <th scope="col">Faculty Name</th>
+        <th scope="col">Emp_ID</th>
+        <th scope="col">Department</th>
+        <th scope="col">Email_ID</th>
+        <th scope="col">Mobile_no</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Type_of_complaint</th>
+        <th scope="col">Complaint Details</th>
+        <th scope="col">status</th>
+      </tr>
+    </thead>
+    <tbody>
+        <%for(let i=0;i<answer1.length;i++){%>
+            <tr>
+              <th scope="row"><%=i+1%></th>
+              <td><%=answer1[i].Fname%> <%=answer1[i].Lname%></td>
+              <td><%=answer1[i].Emp_ID%></td>
+              <td><%=answer1[i].Department%></td>
+              <td><%=answer1[i].Email_Id%></td>
+              <td><%=answer1[i].Mobile_no%></td>
+              <td><%=answer1[i].Designation%></td>
+              <td><%=answer1[i].Type_of_Complaint%></td>
+              <td><%=answer1[i].Complaint_Details%></td>
+              <td><%=answer1[i].Complaint_status%></td>
+              <td><a href="/status/faculty/<%=user%>/<%=answer1[i].id%>"><%=answer1[i].status%></a></td>
+            </tr>
+           
+            <% } %>
+     
+    </tbody>
+  </table>
+
+  <a href="/admin/<%=user%>/pdf/faculty_complaints" class="btn btn-primary">Generate Pdf</a>
+  <a href="/admin/<%=user%>" class="btn btn-secondary">Go back</a>

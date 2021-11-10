@@ -1,0 +1,19 @@
+<%layout("layouts/boilerplate")%>
+<form class="row g-3" action="/faculty" method="POST" data-toggle="validator">
+    <div class="col-md-12">
+        <label for="inputid" class="form-label">ID</label>
+        <input type="number" class="form-control" id="inputid" name="id" required>
+      </div>
+    
+    <div class="col-md-12">
+      <label for="inputPassword" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword" name="password" required>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+      
+    </div>
+    <a href="/faculty/signup">Don't have account click here</a>
+     </form>
+  

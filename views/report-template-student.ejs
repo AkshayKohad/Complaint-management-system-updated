@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <div style="width: 85%; margin: 0 7.5%;">
+            <div style="text-align: center; padding-left: 50px;">            
+                <h3>Student Complaint Report</h5>
+                <table>
+                    <tr>
+                        <th scope="col">Sr.no.</th>
+                          <th>Student Name</th>
+                          <th>Enrollment_No</th>
+                           <th>Department</th>
+                            <th>Email_ID</th>
+                              <th>Mobile_no</th>
+                             <th>Type_of_complaint</th>
+                             <th>Complaint Details</th>
+                             <th>status</th>
+                    </tr>
+                <% if (dataload.length > 0) { %>
+                    <% let i=1 %>
+                    <% dataload.forEach(data => {%>
+                       <tr>
+                        <td><%=i%></td>   
+                        <td><%=data.Fname%> <%=data.Lname%></td>
+                        <td><%=data.Enrollment_No%></td>
+                        <td><%=data.Department%></td>
+                        <td><%=data.Email_Id%></td>
+                        <td><%=data.Mobile_no%></td>
+                        <td><%=data.Type_of_Complaint%></td>
+                        <td><%=data.Complaint_Details%></td>
+                        <td><%=data.status%></a></td>
+                        <% i=i+1 %>
+                        </tr>
+                    <%  });%>
+                <% }%>
+                </table>
+             </div>
+        </div>
+    </body>
+</html>

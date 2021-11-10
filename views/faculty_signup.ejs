@@ -1,0 +1,50 @@
+<%layout("layouts/boilerplate")%>
+<form class="row g-3" action="/faculty/add" method="POST" data-toggle="validator">
+    <div class="col-md-6">
+        <label for="inputfname" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="inputfname" name="fname" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputlname" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="inputlname" name="lname" required>
+      </div>
+    <div class="col-md-6">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" name="email" required>
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword" name="password" required>
+    </div>
+   
+   
+    <div class="col-md-6">
+      <label for="inputid" class="form-label">ID</label>
+      <input type="number" class="form-control" id="inputid" name="id" required>
+    </div>
+    <div class="col-md-6">
+        <label for="inputno" class="form-label">Mobile No.</label>
+        <input type="number" class="form-control" id="inputno" name="no" required>
+      </div>
+    <div class="col-md-3">
+      <label for="inputdept" class="form-label">Department</label>
+      <input type="text" class="form-control" id="inputdept" name="dept" required>
+    </div>
+    <div class="col-md-3">
+        <label for="inputdes" class="form-label">Designation</label>
+        <input type="text" class="form-control" id="inputdes" name="des" required>
+      </div>
+    <div class="col-md-3">
+      <label for="inputgen" class="form-label">Gender</label>
+      <input type="text" class="form-control" id="inputgen" name="gen" required>
+    </div>
+    <div class="col-md-3">
+        <label for="inputcat" class="form-label">Category</label>
+        <input type="text" class="form-control" id="inputcat" name="cat" required>
+      </div>
+   
+    
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign up</button>
+    </div>
+  </form>

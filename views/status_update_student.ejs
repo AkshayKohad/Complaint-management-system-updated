@@ -1,0 +1,14 @@
+<%layout("layouts/boilerplate")%>
+
+<h1>Update the complaint status</h1>
+<form class="row g-3" action="/status/student/<%=user%>/<%=result.id%>?_method=PUT" method="POST" data-toggle="validator">
+    <div class="col-md-12">
+      <label for="status" class="form-label">Status </label>
+      <input type="text" class="form-control" id="status" name="status" value="<%=result.status%>" required>
+    </div>
+    
+   
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Update status</button>
+    </div>
+  </form>
